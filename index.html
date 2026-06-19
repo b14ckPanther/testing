@@ -1,28 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="premium-fintech">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BudgetPal Palette Tester</title>
+  <title>BudgetPal: Personal Budget Agent</title>
 
   <style>
-    /*
-      BudgetPal Palette Tester
-      Palettes:
-      1. Premium Fintech Mint
-      2. AI Nebula Purple
-      3. Luxury Black Gold
-      4. Calm Emerald Bank
-    */
-
     :root {
-      --radius-xl: 28px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
-    }
-
-    html[data-theme="premium-fintech"] {
       --background: #080B12;
       --background-soft: #0B1020;
       --surface: #101827;
@@ -46,404 +30,259 @@
       --ai-glow: rgba(108, 140, 255, 0.28);
 
       --success: #35D399;
-      --success-soft: #11392E;
       --warning: #F5B84C;
-      --warning-soft: #3B2B10;
       --risk: #FF8A5C;
-      --risk-soft: #3A2117;
       --danger: #FF5F6D;
-      --danger-soft: #3B171C;
-      --info: #67B7FF;
-      --info-soft: #102C44;
+      --info: #67D8FF;
+      --purple: #B084FF;
 
-      --chart-1: #4ADEB2;
-      --chart-2: #6C8CFF;
-      --chart-3: #F5B84C;
-      --chart-4: #FF8A5C;
-      --chart-5: #B084FF;
-      --chart-6: #67D8FF;
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
 
-      --hero-1: #10243A;
-      --hero-2: #102D2A;
-      --hero-3: #080B12;
-    }
-
-    html[data-theme="ai-nebula"] {
-      --background: #080713;
-      --background-soft: #0D0B1D;
-      --surface: #111024;
-      --surface-elevated: #1A1733;
-      --surface-glass: rgba(255, 255, 255, 0.07);
-      --border: #2B2850;
-      --border-soft: #211E3E;
-
-      --text-primary: #FAF9FF;
-      --text-secondary: #B8B4D6;
-      --text-muted: #777294;
-      --text-inverse: #080713;
-
-      --primary: #A78BFA;
-      --primary-hover: #8B5CF6;
-      --primary-soft: #2A1F4D;
-      --primary-glow: rgba(167, 139, 250, 0.30);
-
-      --ai: #22D3EE;
-      --ai-soft: #123846;
-      --ai-glow: rgba(34, 211, 238, 0.26);
-
-      --success: #34D399;
-      --success-soft: #10362A;
-      --warning: #FBBF24;
-      --warning-soft: #3B2B0A;
-      --risk: #FB7185;
-      --risk-soft: #3A1822;
-      --danger: #F43F5E;
-      --danger-soft: #3B111C;
-      --info: #38BDF8;
-      --info-soft: #0F3145;
-
-      --chart-1: #A78BFA;
-      --chart-2: #22D3EE;
-      --chart-3: #FBBF24;
-      --chart-4: #FB7185;
-      --chart-5: #34D399;
-      --chart-6: #60A5FA;
-
-      --hero-1: #20143F;
-      --hero-2: #112F42;
-      --hero-3: #080713;
-    }
-
-    html[data-theme="luxury-gold"] {
-      --background: #080806;
-      --background-soft: #0E0D09;
-      --surface: #12110D;
-      --surface-elevated: #1B1811;
-      --surface-glass: rgba(255, 255, 255, 0.055);
-      --border: #332D1C;
-      --border-soft: #272113;
-
-      --text-primary: #FFFDF7;
-      --text-secondary: #C8BFA9;
-      --text-muted: #807765;
-      --text-inverse: #0C0A05;
-
-      --primary: #F4C95D;
-      --primary-hover: #E8B842;
-      --primary-soft: #3A2C10;
-      --primary-glow: rgba(244, 201, 93, 0.28);
-
-      --ai: #6EA8FF;
-      --ai-soft: #10213A;
-      --ai-glow: rgba(110, 168, 255, 0.25);
-
-      --success: #34D399;
-      --success-soft: #102E22;
-      --warning: #F59E0B;
-      --warning-soft: #382608;
-      --risk: #F97316;
-      --risk-soft: #351A08;
-      --danger: #EF4444;
-      --danger-soft: #351111;
-      --info: #60A5FA;
-      --info-soft: #102A44;
-
-      --chart-1: #F4C95D;
-      --chart-2: #6EA8FF;
-      --chart-3: #34D399;
-      --chart-4: #F97316;
-      --chart-5: #A78BFA;
-      --chart-6: #F472B6;
-
-      --hero-1: #2D2110;
-      --hero-2: #17140C;
-      --hero-3: #080806;
-    }
-
-    html[data-theme="calm-emerald"] {
-      --background: #07110D;
-      --background-soft: #0A1711;
-      --surface: #0E1B15;
-      --surface-elevated: #16251D;
-      --surface-glass: rgba(255, 255, 255, 0.055);
-      --border: #26382F;
-      --border-soft: #1D2D25;
-
-      --text-primary: #F4FBF7;
-      --text-secondary: #AAC0B5;
-      --text-muted: #71877B;
-      --text-inverse: #07110D;
-
-      --primary: #34D399;
-      --primary-hover: #22C55E;
-      --primary-soft: #123A2A;
-      --primary-glow: rgba(52, 211, 153, 0.24);
-
-      --ai: #60A5FA;
-      --ai-soft: #102A45;
-      --ai-glow: rgba(96, 165, 250, 0.24);
-
-      --success: #34D399;
-      --success-soft: #11392E;
-      --warning: #FACC15;
-      --warning-soft: #3B320A;
-      --risk: #FB923C;
-      --risk-soft: #3B2110;
-      --danger: #F87171;
-      --danger-soft: #3B1717;
-      --info: #38BDF8;
-      --info-soft: #0F3145;
-
-      --chart-1: #34D399;
-      --chart-2: #60A5FA;
-      --chart-3: #FACC15;
-      --chart-4: #FB923C;
-      --chart-5: #C084FC;
-      --chart-6: #2DD4BF;
-
-      --hero-1: #0F3327;
-      --hero-2: #102A2E;
-      --hero-3: #07110D;
+      --shadow: 0 26px 90px rgba(0, 0, 0, 0.38);
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
       background:
-        radial-gradient(circle at top left, var(--primary-glow), transparent 34%),
-        radial-gradient(circle at top right, var(--ai-glow), transparent 32%),
+        radial-gradient(circle at top left, rgba(74, 222, 178, 0.13), transparent 34%),
+        radial-gradient(circle at top right, rgba(108, 140, 255, 0.16), transparent 32%),
+        radial-gradient(circle at 50% 40%, rgba(176, 132, 255, 0.08), transparent 30%),
         var(--background);
       color: var(--text-primary);
       font-family: Ubuntu, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      transition: background 220ms ease, color 220ms ease;
     }
 
-    button,
-    input {
-      font: inherit;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     .page {
-      max-width: 1240px;
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 32px 20px 60px;
+      padding: 26px 0 70px;
     }
 
-    .topbar {
+    .nav {
+      position: sticky;
+      top: 14px;
+      z-index: 50;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      margin-bottom: 34px;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px;
+      border: 1px solid var(--border-soft);
+      background: rgba(8, 11, 18, 0.72);
+      backdrop-filter: blur(18px);
+      border-radius: 24px;
+      box-shadow: 0 18px 70px rgba(0, 0, 0, 0.25);
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+      min-width: max-content;
     }
 
     .logo {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       border-radius: 16px;
       background:
-        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.45), transparent 28%),
+        radial-gradient(circle at 32% 22%, rgba(255,255,255,0.52), transparent 22%),
         linear-gradient(135deg, var(--primary), var(--ai));
       box-shadow: 0 0 34px var(--primary-glow);
     }
 
-    .brand-title {
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      font-size: 22px;
+    .brand-name {
+      font-weight: 950;
+      letter-spacing: -0.045em;
+      font-size: 21px;
     }
 
-    .brand-subtitle {
+    .brand-sub {
       color: var(--text-muted);
-      font-size: 13px;
+      font-size: 12px;
       margin-top: 2px;
     }
 
-    .theme-switcher {
+    .nav-links {
       display: flex;
+      gap: 8px;
       flex-wrap: wrap;
-      gap: 10px;
       justify-content: flex-end;
     }
 
-    .theme-button {
-      border: 1px solid var(--border);
-      background: var(--surface-glass);
+    .nav-links a {
       color: var(--text-secondary);
-      border-radius: 999px;
-      padding: 10px 14px;
-      cursor: pointer;
       font-size: 13px;
       font-weight: 800;
-      transition: 180ms ease;
+      padding: 10px 12px;
+      border-radius: 999px;
+      transition: 160ms ease;
     }
 
-    .theme-button:hover {
+    .nav-links a:hover {
       color: var(--text-primary);
-      border-color: var(--primary);
-    }
-
-    .theme-button.active {
-      background: var(--primary);
-      color: var(--text-inverse);
-      border-color: var(--primary);
-      box-shadow: 0 0 24px var(--primary-glow);
+      background: var(--surface-glass);
     }
 
     .hero {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
-      margin-bottom: 22px;
-    }
-
-    .card {
-      background: linear-gradient(145deg, var(--surface-elevated), var(--surface));
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-xl);
-      padding: 24px;
-      box-shadow: var(--shadow);
-      transition: 220ms ease;
-    }
-
-    .hero-card {
-      background:
-        radial-gradient(circle at top right, var(--primary-glow), transparent 28%),
-        radial-gradient(circle at bottom left, var(--ai-glow), transparent 32%),
-        linear-gradient(145deg, var(--hero-1), var(--hero-2), var(--hero-3));
-      border-color: color-mix(in srgb, var(--primary) 28%, transparent);
-      min-height: 360px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: center;
+      padding: 74px 0 46px;
     }
 
     .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
+      background: var(--primary-soft);
+      border: 1px solid rgba(74, 222, 178, 0.22);
+      border-radius: 999px;
+      padding: 9px 12px;
       font-size: 12px;
       font-weight: 900;
-      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      margin-bottom: 18px;
     }
 
-    h1 {
+    .hero h1 {
       margin: 0;
-      font-size: clamp(36px, 5vw, 66px);
-      line-height: 0.95;
-      letter-spacing: -0.07em;
+      font-size: clamp(44px, 6vw, 86px);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
     }
 
-    .subtitle {
+    .hero h1 span {
+      color: var(--primary);
+      text-shadow: 0 0 34px var(--primary-glow);
+    }
+
+    .hero-description {
       color: var(--text-secondary);
-      line-height: 1.7;
-      font-size: 16px;
+      font-size: 18px;
+      line-height: 1.75;
       max-width: 680px;
-      margin: 18px 0 0;
+      margin: 22px 0 0;
     }
 
     .hero-actions {
       display: flex;
-      flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      flex-wrap: wrap;
+      margin-top: 30px;
     }
 
-    .btn {
+    .button {
       border: 0;
-      border-radius: 16px;
-      padding: 13px 18px;
-      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      padding: 14px 18px;
+      font-weight: 950;
       cursor: pointer;
+      font-size: 15px;
     }
 
-    .btn-primary {
+    .button-primary {
       background: var(--primary);
       color: var(--text-inverse);
-      box-shadow: 0 0 28px var(--primary-glow);
+      box-shadow: 0 0 32px var(--primary-glow);
     }
 
-    .btn-secondary {
+    .button-secondary {
       background: var(--surface-glass);
-      color: var(--text-primary);
       border: 1px solid var(--border);
+      color: var(--text-primary);
     }
 
-    .metric-grid {
+    .hero-stats {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
       margin-top: 28px;
+      max-width: 680px;
     }
 
-    .metric {
+    .stat {
       background: var(--surface-glass);
       border: 1px solid var(--border-soft);
-      border-radius: 22px;
+      border-radius: 20px;
       padding: 16px;
     }
 
-    .metric-label {
-      color: var(--text-muted);
-      font-size: 13px;
-      margin-bottom: 8px;
-    }
-
-    .metric-value {
-      color: var(--text-primary);
-      font-weight: 900;
+    .stat-value {
       font-size: 24px;
+      font-weight: 950;
       letter-spacing: -0.04em;
+      color: var(--text-primary);
+      margin-bottom: 4px;
     }
 
-    .safe-value {
-      color: var(--primary);
-      text-shadow: 0 0 26px var(--primary-glow);
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.4;
     }
 
-    .phone-wrap {
-      max-width: 390px;
+    .phone-shell {
+      width: min(400px, 100%);
       margin: 0 auto;
-      border-radius: 42px;
+      border-radius: 46px;
       padding: 14px;
       background: #05070D;
       border: 1px solid var(--border);
-      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.55);
+      box-shadow: var(--shadow);
+      transform: rotate(1deg);
     }
 
-    .phone {
-      border-radius: 32px;
-      overflow: hidden;
-      background: var(--background);
+    .phone-screen {
       min-height: 720px;
-      padding: 20px;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at top right, rgba(74, 222, 178, 0.12), transparent 30%),
+        var(--background);
       border: 1px solid var(--border-soft);
+      padding: 20px;
+      overflow: hidden;
     }
 
     .phone-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .small-label {
       color: var(--text-muted);
       font-size: 13px;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .phone-title {
       font-size: 24px;
-      font-weight: 900;
-      letter-spacing: -0.04em;
+      font-weight: 950;
+      letter-spacing: -0.045em;
     }
 
     .avatar {
@@ -458,28 +297,28 @@
       background:
         radial-gradient(circle at top right, var(--primary-glow), transparent 36%),
         linear-gradient(145deg, var(--surface-elevated), var(--surface));
-      border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--border));
+      border: 1px solid rgba(74, 222, 178, 0.24);
       border-radius: 28px;
       padding: 20px;
       margin-bottom: 14px;
     }
 
     .money {
-      color: var(--primary);
-      font-size: 46px;
+      font-size: 48px;
       line-height: 1;
       font-weight: 950;
-      letter-spacing: -0.07em;
-      text-shadow: 0 0 30px var(--primary-glow);
+      letter-spacing: -0.075em;
+      color: var(--primary);
+      text-shadow: 0 0 32px var(--primary-glow);
       margin: 8px 0 12px;
     }
 
     .pill {
       display: inline-flex;
+      border-radius: 999px;
       background: var(--primary-soft);
       color: var(--primary);
-      border: 1px solid color-mix(in srgb, var(--primary) 28%, transparent);
-      border-radius: 999px;
+      border: 1px solid rgba(74, 222, 178, 0.28);
       padding: 8px 11px;
       font-size: 12px;
       font-weight: 900;
@@ -495,15 +334,11 @@
 
     .ai-card {
       background: var(--ai-soft);
-      border-color: color-mix(in srgb, var(--ai) 32%, transparent);
+      border-color: rgba(108, 140, 255, 0.28);
     }
 
     .ai-card strong {
       color: var(--ai);
-    }
-
-    .progress-row {
-      margin-top: 14px;
     }
 
     .progress-head {
@@ -519,6 +354,7 @@
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.08);
       overflow: hidden;
+      margin-bottom: 14px;
     }
 
     .fill {
@@ -526,68 +362,29 @@
       border-radius: 999px;
     }
 
-    .safe { width: 54%; background: var(--success); }
-    .watch { width: 78%; background: var(--warning); }
-    .risk { width: 91%; background: var(--risk); }
-    .over { width: 100%; background: var(--danger); }
+    .fill.safe { width: 54%; background: var(--primary); }
+    .fill.watch { width: 82%; background: var(--warning); }
+    .fill.risk { width: 94%; background: var(--risk); }
 
-    .bottom-nav {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 8px;
-      margin-top: 18px;
-      background: var(--surface);
-      border: 1px solid var(--border-soft);
-      border-radius: 22px;
-      padding: 10px;
-    }
-
-    .nav-item {
-      height: 38px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.045);
-    }
-
-    .nav-item.active {
-      background: var(--primary-soft);
-      border: 1px solid color-mix(in srgb, var(--primary) 28%, transparent);
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin-bottom: 22px;
-    }
-
-    .section-title {
-      margin: 0 0 16px;
-      font-size: 20px;
-      letter-spacing: -0.03em;
-    }
-
-    .chat {
+    .chat-preview {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 10px;
+      margin-top: 6px;
     }
 
     .bubble {
-      padding: 14px 16px;
-      border-radius: 18px;
-      line-height: 1.55;
-      font-size: 14px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      line-height: 1.45;
+      font-size: 13px;
     }
 
-    .bubble.assistant {
+    .bubble.ai {
       background: var(--ai-soft);
-      border: 1px solid color-mix(in srgb, var(--ai) 28%, transparent);
+      border: 1px solid rgba(108, 140, 255, 0.22);
       align-self: flex-start;
-      max-width: 90%;
-    }
-
-    .bubble.assistant strong {
-      color: var(--ai);
+      max-width: 94%;
     }
 
     .bubble.user {
@@ -595,173 +392,385 @@
       color: var(--text-inverse);
       font-weight: 900;
       align-self: flex-end;
-      max-width: 75%;
-      box-shadow: 0 0 22px var(--primary-glow);
+      max-width: 72%;
     }
 
-    .warning-card {
-      background: var(--warning-soft);
-      border: 1px solid color-mix(in srgb, var(--warning) 32%, transparent);
-      color: var(--warning);
-      border-radius: 20px;
-      padding: 16px;
-      line-height: 1.5;
-      margin-top: 14px;
-      font-weight: 700;
+    .section {
+      padding: 54px 0;
     }
 
-    .danger-card {
-      background: var(--danger-soft);
-      border: 1px solid color-mix(in srgb, var(--danger) 32%, transparent);
-      color: var(--danger);
-      border-radius: 20px;
-      padding: 16px;
-      line-height: 1.5;
-      margin-top: 14px;
-      font-weight: 700;
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 24px;
     }
 
-    .chart-bars {
-      display: flex;
-      align-items: end;
-      gap: 12px;
-      height: 180px;
-      margin-top: 20px;
-    }
-
-    .bar {
-      flex: 1;
-      min-width: 36px;
-      border-radius: 16px 16px 6px 6px;
-      box-shadow: 0 0 22px rgba(255,255,255,0.04);
-    }
-
-    .bar:nth-child(1) { height: 78%; background: var(--chart-1); }
-    .bar:nth-child(2) { height: 58%; background: var(--chart-2); }
-    .bar:nth-child(3) { height: 42%; background: var(--chart-3); }
-    .bar:nth-child(4) { height: 68%; background: var(--chart-4); }
-    .bar:nth-child(5) { height: 36%; background: var(--chart-5); }
-    .bar:nth-child(6) { height: 50%; background: var(--chart-6); }
-
-    .palette-card {
-      margin-bottom: 22px;
-    }
-
-    .palette-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .swatch {
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--border-soft);
-      background: var(--surface);
-    }
-
-    .swatch-color {
-      height: 76px;
-    }
-
-    .swatch-info {
-      padding: 10px;
-    }
-
-    .swatch-name {
-      color: var(--text-secondary);
-      font-size: 12px;
-      margin-bottom: 4px;
-    }
-
-    .swatch-code {
-      color: var(--text-primary);
-      font-weight: 900;
-      font-size: 12px;
-    }
-
-    .form-preview {
-      display: grid;
-      gap: 12px;
-    }
-
-    .field {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-primary);
-      border-radius: 16px;
-      padding: 14px 15px;
-      outline: none;
-      width: 100%;
-    }
-
-    .field:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px var(--primary-glow);
-    }
-
-    .token-list {
-      display: grid;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .token-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--surface-glass);
-      border: 1px solid var(--border-soft);
-      border-radius: 14px;
-      padding: 12px;
-      color: var(--text-secondary);
+    .section-kicker {
+      color: var(--primary);
       font-size: 13px;
+      font-weight: 950;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
 
-    .token-dot {
-      width: 18px;
-      height: 18px;
-      border-radius: 7px;
-      margin-inline-end: 8px;
+    .section-title {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.06em;
     }
 
-    .token-left {
-      display: flex;
-      align-items: center;
-      font-weight: 800;
+    .section-text {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-size: 16px;
+      margin-top: 14px;
     }
 
-    .footer-note {
-      color: var(--text-muted);
-      text-align: center;
-      margin-top: 28px;
-      line-height: 1.6;
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card,
+    .step-card,
+    .persona-card {
+      background: linear-gradient(145deg, var(--surface-elevated), var(--surface));
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: var(--primary-soft);
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-weight: 950;
+      font-size: 20px;
+    }
+
+    .icon.ai {
+      background: var(--ai-soft);
+      color: var(--ai);
+    }
+
+    .icon.warning {
+      background: rgba(245, 184, 76, 0.12);
+      color: var(--warning);
+    }
+
+    .feature-card h3,
+    .step-card h3,
+    .persona-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: -0.035em;
+    }
+
+    .feature-card p,
+    .step-card p,
+    .persona-card p {
+      margin: 0;
+      color: var(--text-secondary);
+      line-height: 1.7;
       font-size: 14px;
     }
 
-    @media (max-width: 960px) {
-      .topbar,
+    .problem-solution {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .problem-card {
+      background:
+        radial-gradient(circle at top right, rgba(255, 95, 109, 0.12), transparent 32%),
+        linear-gradient(145deg, var(--surface-elevated), var(--surface));
+      border: 1px solid rgba(255, 95, 109, 0.20);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+    }
+
+    .solution-card {
+      background:
+        radial-gradient(circle at top right, rgba(74, 222, 178, 0.14), transparent 32%),
+        linear-gradient(145deg, var(--surface-elevated), var(--surface));
+      border: 1px solid rgba(74, 222, 178, 0.22);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+    }
+
+    .label-danger {
+      color: var(--danger);
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .label-success {
+      color: var(--primary);
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .big-card-title {
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin: 0 0 14px;
+    }
+
+    .card-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .list-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .check,
+    .xmark {
+      flex: 0 0 auto;
+      width: 22px;
+      height: 22px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .check {
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+
+    .xmark {
+      background: rgba(255, 95, 109, 0.12);
+      color: var(--danger);
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .flow-card {
+      background: var(--surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 22px;
+      padding: 18px;
+      position: relative;
+    }
+
+    .flow-number {
+      width: 34px;
+      height: 34px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: var(--ai-soft);
+      color: var(--ai);
+      font-weight: 950;
+      margin-bottom: 14px;
+    }
+
+    .flow-card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .flow-card p {
+      margin: 0;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      font-size: 13px;
+    }
+
+    .showcase {
+      background:
+        radial-gradient(circle at top left, var(--primary-glow), transparent 34%),
+        radial-gradient(circle at bottom right, var(--ai-glow), transparent 30%),
+        linear-gradient(145deg, var(--surface-elevated), var(--surface));
+      border: 1px solid var(--border);
+      border-radius: 38px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .analysis-card {
+      background: rgba(255,255,255,0.045);
+      border: 1px solid var(--border-soft);
+      border-radius: 22px;
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+
+    .analysis-card h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .bar-row {
+      margin-top: 14px;
+    }
+
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-secondary);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .bar-track {
+      height: 12px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 64px 28px;
+      background:
+        radial-gradient(circle at top, var(--primary-glow), transparent 30%),
+        linear-gradient(145deg, var(--hero-1), var(--hero-2), var(--hero-3));
+      border: 1px solid rgba(74, 222, 178, 0.20);
+      border-radius: 42px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      font-size: clamp(34px, 5vw, 64px);
+      margin: 0;
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 18px auto 0;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-size: 17px;
+    }
+
+    .footer {
+      color: var(--text-muted);
+      text-align: center;
+      padding: 30px 0 0;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
       .hero,
-      .section-grid {
+      .problem-solution,
+      .showcase-grid,
+      .grid-2 {
         grid-template-columns: 1fr;
-        display: grid;
       }
 
-      .topbar {
+      .grid-3 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .flow {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .phone-shell {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 22px, 1180px);
+        padding-top: 12px;
+      }
+
+      .nav {
+        position: static;
         align-items: flex-start;
       }
 
-      .theme-switcher {
-        justify-content: flex-start;
+      .nav-links {
+        display: none;
       }
 
-      .palette-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .hero {
+        padding: 46px 0 30px;
       }
 
-      .metric-grid {
+      .hero-stats,
+      .grid-3,
+      .flow {
         grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .phone-screen {
+        min-height: 650px;
+      }
+
+      .section {
+        padding: 38px 0;
+      }
+
+      .big-card-title {
+        font-size: 28px;
+      }
+
+      .cta {
+        padding: 44px 18px;
       }
     }
   </style>
@@ -769,60 +778,58 @@
 
 <body>
   <main class="page">
-    <header class="topbar">
-      <div class="brand">
+    <nav class="nav">
+      <a href="#top" class="brand">
         <div class="logo"></div>
         <div>
-          <div class="brand-title">BudgetPal</div>
-          <div class="brand-subtitle">Personal Budget Agent · Palette Tester</div>
+          <div class="brand-name">BudgetPal</div>
+          <div class="brand-sub">Personal Budget Agent</div>
         </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#problem">Problem</a>
+        <a href="#features">Features</a>
+        <a href="#agent">AI Agent</a>
+        <a href="#journey">How It Works</a>
+        <a href="#demo">Demo</a>
       </div>
+    </nav>
 
-      <nav class="theme-switcher" aria-label="Palette switcher">
-        <button class="theme-button active" data-theme="premium-fintech">Premium Fintech</button>
-        <button class="theme-button" data-theme="ai-nebula">AI Nebula</button>
-        <button class="theme-button" data-theme="luxury-gold">Luxury Gold</button>
-        <button class="theme-button" data-theme="calm-emerald">Calm Emerald</button>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div class="card hero-card">
-        <div class="eyebrow" id="themeEyebrow">Premium Fintech Mint</div>
-        <h1>BudgetPal: Personal Budget Agent</h1>
-        <p class="subtitle" id="themeDescription">
-          A dark premium fintech palette with deep navy surfaces, mint safe-money actions,
-          blue AI accents, amber warnings, and coral over-budget states.
+    <section class="hero" id="top">
+      <div>
+        <div class="eyebrow">AI-powered budgeting, made human</div>
+        <h1>Your budget should <span>understand you.</span></h1>
+        <p class="hero-description">
+          BudgetPal is a personal budget agent that helps users track expenses, understand spending,
+          receive smart warnings, and make better money decisions through natural conversation.
+          Instead of forcing users into spreadsheets, BudgetPal lets them say things like
+          <strong>“coffee 40”</strong> and turns that into a real budget update.
         </p>
 
         <div class="hero-actions">
-          <button class="btn btn-primary">Ask BudgetPal</button>
-          <button class="btn btn-secondary">Add Expense</button>
-          <button class="btn btn-secondary">Generate Report</button>
+          <a class="button button-primary" href="#features">Explore BudgetPal</a>
+          <a class="button button-secondary" href="#demo">View App Experience</a>
         </div>
 
-        <div class="metric-grid">
-          <div class="metric">
-            <div class="metric-label">Safe to spend today</div>
-            <div class="metric-value safe-value">₪72</div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-value">Natural</div>
+            <div class="stat-label">Add expenses using everyday language</div>
           </div>
-          <div class="metric">
-            <div class="metric-label">Budget health</div>
-            <div class="metric-value">Healthy</div>
+          <div class="stat">
+            <div class="stat-value">Smart</div>
+            <div class="stat-label">AI categorizes, analyzes, and explains</div>
           </div>
-          <div class="metric">
-            <div class="metric-label">Monthly spending</div>
-            <div class="metric-value">₪2,840</div>
-          </div>
-          <div class="metric">
-            <div class="metric-label">AI confidence</div>
-            <div class="metric-value">94%</div>
+          <div class="stat">
+            <div class="stat-value">Actionable</div>
+            <div class="stat-label">Warnings, tips, reports, and next steps</div>
           </div>
         </div>
       </div>
 
-      <div class="phone-wrap">
-        <div class="phone">
+      <div class="phone-shell" aria-label="BudgetPal mobile app preview">
+        <div class="phone-screen">
           <div class="phone-top">
             <div>
               <div class="small-label">Good evening</div>
@@ -832,14 +839,14 @@
           </div>
 
           <div class="safe-card">
-            <div class="small-label">Safe to spend</div>
+            <div class="small-label">Safe to spend today</div>
             <div class="money">₪72</div>
-            <div class="pill">On track</div>
+            <div class="pill">Healthy budget status</div>
           </div>
 
           <div class="mini-card ai-card">
             <div class="small-label">AI Insight</div>
-            <div style="line-height:1.55;">
+            <div style="line-height: 1.55;">
               <strong>Food spending is rising.</strong>
               Try keeping food under ₪35/day this week.
             </div>
@@ -852,307 +859,405 @@
             </div>
             <div class="track"><div class="fill safe"></div></div>
 
-            <div class="progress-row">
-              <div class="progress-head">
-                <span>Transport</span>
-                <span>78%</span>
-              </div>
-              <div class="track"><div class="fill watch"></div></div>
+            <div class="progress-head">
+              <span>Transport</span>
+              <span>82%</span>
             </div>
+            <div class="track"><div class="fill watch"></div></div>
 
-            <div class="progress-row">
-              <div class="progress-head">
-                <span>Shopping</span>
-                <span>91%</span>
+            <div class="progress-head">
+              <span>Shopping</span>
+              <span>94%</span>
+            </div>
+            <div class="track"><div class="fill risk"></div></div>
+          </div>
+
+          <div class="mini-card">
+            <div class="small-label">Agent Chat</div>
+            <div class="chat-preview">
+              <div class="bubble ai">Nice to see you. How can I help with your budget today?</div>
+              <div class="bubble user">coffee 40</div>
+              <div class="bubble ai">Added ₪40 under Food & Drinks → Coffee.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="problem-solution">
+        <div class="problem-card">
+          <div class="label-danger">The problem</div>
+          <h2 class="big-card-title">Budgeting apps feel like work.</h2>
+          <p class="section-text">
+            Many users stop tracking their money because traditional budgeting tools require too many steps:
+            selecting categories, entering forms, checking charts, and manually understanding what went wrong.
+          </p>
+
+          <div class="card-list">
+            <div class="list-item">
+              <span class="xmark">×</span>
+              <span>Manual expense entry feels slow and repetitive.</span>
+            </div>
+            <div class="list-item">
+              <span class="xmark">×</span>
+              <span>Charts show numbers but do not explain what they mean.</span>
+            </div>
+            <div class="list-item">
+              <span class="xmark">×</span>
+              <span>Users often notice budget problems only after they already overspent.</span>
+            </div>
+            <div class="list-item">
+              <span class="xmark">×</span>
+              <span>Most apps track the past, but do not guide the next decision.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <div class="label-success">The solution</div>
+          <h2 class="big-card-title">BudgetPal acts like a money copilot.</h2>
+          <p class="section-text">
+            BudgetPal understands natural input, updates the budget, warns the user, and explains what to do next.
+            It turns budgeting from a manual task into a guided conversation.
+          </p>
+
+          <div class="card-list">
+            <div class="list-item">
+              <span class="check">✓</span>
+              <span>Users can type simple inputs like <strong>coffee 40</strong>.</span>
+            </div>
+            <div class="list-item">
+              <span class="check">✓</span>
+              <span>The agent categorizes expenses and updates the right budget.</span>
+            </div>
+            <div class="list-item">
+              <span class="check">✓</span>
+              <span>Smart warnings appear before the user loses control.</span>
+            </div>
+            <div class="list-item">
+              <span class="check">✓</span>
+              <span>Users can ask questions and get personalized answers.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-header">
+        <div class="section-kicker">What BudgetPal does</div>
+        <h2 class="section-title">A complete budgeting experience built around an AI agent.</h2>
+        <p class="section-text">
+          BudgetPal combines budget tracking, natural transaction input, AI insights, spending analysis,
+          warnings, and financial guidance into one simple mobile experience.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="icon">₪</div>
+          <h3>Safe-to-spend view</h3>
+          <p>
+            Instead of only showing a balance, BudgetPal tells the user how much they can safely spend
+            while considering budgets, goals, income, and spending pace.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon ai">AI</div>
+          <h3>Natural transaction input</h3>
+          <p>
+            Users can type messy inputs like “coffee 40” or “netflix 39.90”.
+            The agent understands the meaning and turns it into a structured transaction.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">↳</div>
+          <h3>Smart categorization</h3>
+          <p>
+            The agent matches expenses to existing categories, suggests subcategories, and can create
+            new categories when needed without making the budget messy.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon warning">!</div>
+          <h3>Budget warnings</h3>
+          <p>
+            When a category is close to its limit or over budget, BudgetPal explains the issue clearly
+            and suggests a realistic next step.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon ai">?</div>
+          <h3>Ask about spending</h3>
+          <p>
+            Users can ask questions like “What did I spend most on this month?” and get answers based
+            on real transaction data.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">★</div>
+          <h3>Personalized saving tips</h3>
+          <p>
+            BudgetPal gives advice based on the user’s actual budget behavior, not generic tips that
+            ignore their situation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="agent">
+      <div class="showcase">
+        <div class="showcase-grid">
+          <div>
+            <div class="section-kicker">The agent is the product</div>
+            <h2 class="section-title">Not just a chatbot. Not just a tracker.</h2>
+            <p class="section-text">
+              BudgetPal’s agent can talk normally, perform budget actions, answer spending questions,
+              explain trends, and prepare changes for the user to approve. It is designed to be helpful
+              even when the user does not know exactly what to ask.
+            </p>
+
+            <div class="card-list">
+              <div class="list-item">
+                <span class="check">✓</span>
+                <span><strong>Casual:</strong> “Hi” → friendly greeting using the user’s name.</span>
               </div>
-              <div class="track"><div class="fill risk"></div></div>
+              <div class="list-item">
+                <span class="check">✓</span>
+                <span><strong>Action:</strong> “coffee 40” → add an expense and update the budget.</span>
+              </div>
+              <div class="list-item">
+                <span class="check">✓</span>
+                <span><strong>Analysis:</strong> “What did I spend most on?” → category breakdown.</span>
+              </div>
+              <div class="list-item">
+                <span class="check">✓</span>
+                <span><strong>Guidance:</strong> “How can I save?” → personalized recommendations.</span>
+              </div>
             </div>
           </div>
 
-          <div class="bottom-nav">
-            <div class="nav-item active"></div>
-            <div class="nav-item"></div>
-            <div class="nav-item"></div>
-            <div class="nav-item"></div>
-            <div class="nav-item"></div>
+          <div class="mini-card" style="margin: 0;">
+            <div class="small-label">Conversation example</div>
+            <div class="chat-preview" style="gap: 14px;">
+              <div class="bubble user">Hi</div>
+              <div class="bubble ai">Nice to see you, Noor. How can I help you with your budget today?</div>
+              <div class="bubble user">Can I afford headphones for 300?</div>
+              <div class="bubble ai">
+                You can afford them, but it would reduce your safe-to-spend amount this week.
+                A safer option is waiting until your phone bill clears.
+              </div>
+              <div class="bubble user">What should I spend less on?</div>
+              <div class="bubble ai">
+                Food & Drinks is your fastest-growing category this month.
+                Reducing delivery orders could save about ₪120.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-grid">
-      <div class="card">
-        <h2 class="section-title">Agent Chat Preview</h2>
-
-        <div class="chat">
-          <div class="bubble assistant">
-            <strong>BudgetPal:</strong> Nice to see you, Noor. How can I help you with your budget today?
-          </div>
-
-          <div class="bubble user">
-            coffee 40
-          </div>
-
-          <div class="bubble assistant">
-            Added ₪40 for coffee under Food & Drinks → Coffee. Food & Drinks is now ₪340 / ₪800.
-          </div>
-
-          <div class="bubble user">
-            What did I spend most on this month?
-          </div>
-
-          <div class="bubble assistant">
-            Your highest category this month is Food & Drinks. The easiest place to save is reducing delivery and coffee purchases.
-          </div>
-        </div>
+    <section class="section" id="journey">
+      <div class="section-header">
+        <div class="section-kicker">How it works</div>
+        <h2 class="section-title">From messy input to budget clarity.</h2>
+        <p class="section-text">
+          BudgetPal turns natural language into safe, validated, useful financial actions.
+        </p>
       </div>
 
-      <div class="card">
-        <h2 class="section-title">Budget States</h2>
-
-        <div class="progress-row">
-          <div class="progress-head">
-            <span>Safe</span>
-            <span>54%</span>
-          </div>
-          <div class="track"><div class="fill safe"></div></div>
+      <div class="flow">
+        <div class="flow-card">
+          <div class="flow-number">1</div>
+          <h3>User speaks naturally</h3>
+          <p>The user types something simple like “coffee 40” or asks a budget question.</p>
         </div>
 
-        <div class="progress-row">
-          <div class="progress-head">
-            <span>Watch</span>
-            <span>78%</span>
-          </div>
-          <div class="track"><div class="fill watch"></div></div>
+        <div class="flow-card">
+          <div class="flow-number">2</div>
+          <h3>Agent understands intent</h3>
+          <p>BudgetPal detects whether this is a transaction, question, advice request, or action.</p>
         </div>
 
-        <div class="progress-row">
-          <div class="progress-head">
-            <span>Risk</span>
-            <span>91%</span>
-          </div>
-          <div class="track"><div class="fill risk"></div></div>
+        <div class="flow-card">
+          <div class="flow-number">3</div>
+          <h3>Budget context loads</h3>
+          <p>The app checks categories, limits, recent transactions, and user preferences.</p>
         </div>
 
-        <div class="progress-row">
-          <div class="progress-head">
-            <span>Over Budget</span>
-            <span>100%+</span>
-          </div>
-          <div class="track"><div class="fill over"></div></div>
+        <div class="flow-card">
+          <div class="flow-number">4</div>
+          <h3>Action is validated</h3>
+          <p>The backend validates the result before saving anything to the budget.</p>
         </div>
 
-        <div class="warning-card">
-          Shopping is close to the monthly limit. You have 9 days left in this budget cycle.
-        </div>
-
-        <div class="danger-card">
-          Subscriptions are over budget by ₪30. Consider reviewing recurring payments.
+        <div class="flow-card">
+          <div class="flow-number">5</div>
+          <h3>User gets clarity</h3>
+          <p>The budget updates, and the user receives a clear explanation or warning.</p>
         </div>
       </div>
     </section>
 
-    <section class="section-grid">
-      <div class="card">
-        <h2 class="section-title">Report Chart Preview</h2>
-        <div class="chart-bars">
-          <div class="bar" title="Food"></div>
-          <div class="bar" title="Transport"></div>
-          <div class="bar" title="Shopping"></div>
-          <div class="bar" title="Bills"></div>
-          <div class="bar" title="Subscriptions"></div>
-          <div class="bar" title="Other"></div>
-        </div>
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Who it helps</div>
+        <h2 class="section-title">Built for people who need clarity, not complexity.</h2>
       </div>
 
-      <div class="card">
-        <h2 class="section-title">Form / Input Preview</h2>
+      <div class="grid-3">
+        <div class="persona-card">
+          <div class="icon">1</div>
+          <h3>Students and young adults</h3>
+          <p>
+            Helps users understand daily spending, avoid overspending, and build better habits
+            without complicated financial tools.
+          </p>
+        </div>
 
-        <div class="form-preview">
-          <input class="field" value="Coffee" aria-label="Merchant" />
-          <input class="field" value="40" aria-label="Amount" />
-          <input class="field" value="Food & Drinks" aria-label="Category" />
-          <button class="btn btn-primary">Save Transaction</button>
-          <button class="btn btn-secondary">Ask BudgetPal to Categorize</button>
+        <div class="persona-card">
+          <div class="icon">2</div>
+          <h3>Families and households</h3>
+          <p>
+            Makes it easier to track food, bills, transport, subscriptions, and monthly expenses
+            in a simple dashboard.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <section class="card palette-card">
-      <h2 class="section-title">Active Palette Tokens</h2>
-      <div class="palette-grid" id="paletteGrid"></div>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Token Usage</h2>
-
-      <div class="token-list">
-        <div class="token-row">
-          <div class="token-left"><span class="token-dot" style="background:var(--primary)"></span>Primary</div>
-          <span>main action, safe-to-spend, positive budget state</span>
-        </div>
-        <div class="token-row">
-          <div class="token-left"><span class="token-dot" style="background:var(--ai)"></span>AI Accent</div>
-          <span>agent cards, analysis, smart suggestions</span>
-        </div>
-        <div class="token-row">
-          <div class="token-left"><span class="token-dot" style="background:var(--warning)"></span>Warning</div>
-          <span>near budget limit</span>
-        </div>
-        <div class="token-row">
-          <div class="token-left"><span class="token-dot" style="background:var(--risk)"></span>Risk</div>
-          <span>almost over budget</span>
-        </div>
-        <div class="token-row">
-          <div class="token-left"><span class="token-dot" style="background:var(--danger)"></span>Danger</div>
-          <span>over budget or critical spending issue</span>
+        <div class="persona-card">
+          <div class="icon">3</div>
+          <h3>People who dislike spreadsheets</h3>
+          <p>
+            BudgetPal removes the feeling of manual accounting by allowing natural input and
+            conversation-based guidance.
+          </p>
         </div>
       </div>
     </section>
 
-    <p class="footer-note">
-      My recommendation for BudgetPal: Premium Fintech if you want the best balance,
-      AI Nebula if you want the strongest “AI wow” feeling, Calm Emerald if you want the most practical budgeting feel.
-    </p>
+    <section class="section" id="demo">
+      <div class="section-header">
+        <div class="section-kicker">Example experience</div>
+        <h2 class="section-title">BudgetPal explains the “why,” not just the number.</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="analysis-card">
+          <h3>Monthly spending insight</h3>
+          <p class="section-text" style="margin-top: 0;">
+            Your highest category this month is <strong>Food & Drinks</strong>. It is growing faster
+            than expected, mainly because of coffee and delivery purchases.
+          </p>
+
+          <div class="bar-row">
+            <div class="bar-label">
+              <span>Food & Drinks</span>
+              <span>₪1,240</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width: 86%; background: var(--primary);"></div></div>
+          </div>
+
+          <div class="bar-row">
+            <div class="bar-label">
+              <span>Transport</span>
+              <span>₪680</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width: 58%; background: var(--ai);"></div></div>
+          </div>
+
+          <div class="bar-row">
+            <div class="bar-label">
+              <span>Shopping</span>
+              <span>₪520</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width: 44%; background: var(--warning);"></div></div>
+          </div>
+        </div>
+
+        <div class="analysis-card">
+          <h3>AI recommendation</h3>
+          <p class="section-text" style="margin-top: 0;">
+            If you reduce food delivery by two orders this week, you can save around <strong>₪80–₪120</strong>
+            and stay closer to your monthly plan.
+          </p>
+
+          <div class="card-list">
+            <div class="list-item">
+              <span class="check">✓</span>
+              <span>Keep coffee spending under ₪25/day.</span>
+            </div>
+            <div class="list-item">
+              <span class="check">✓</span>
+              <span>Review subscriptions before the next billing cycle.</span>
+            </div>
+            <div class="list-item">
+              <span class="check">✓</span>
+              <span>Move unused transport budget to savings if the trend continues.</span>
+            </div>
+          </div>
+
+          <div class="warning-card" style="margin-top: 18px;">
+            Shopping is at 94% of its monthly limit. BudgetPal recommends waiting before increasing it.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Future direction</div>
+        <h2 class="section-title">The agent can grow beyond text.</h2>
+        <p class="section-text">
+          BudgetPal starts with text and manual transactions, but the same agent can later understand
+          receipts, voice, imported files, reports, and smart notifications.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="icon">🎙</div>
+          <h3>Voice input</h3>
+          <p>Users can say expenses out loud, and BudgetPal turns speech into structured transactions.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">▣</div>
+          <h3>Receipt scanning</h3>
+          <p>Users can upload receipt images, and BudgetPal extracts totals, merchants, and categories.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">PDF</div>
+          <h3>Reports</h3>
+          <p>Users can generate clear summaries of expenses, categories, warnings, and recommendations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Budgeting should feel like guidance, not homework.</h2>
+      <p>
+        BudgetPal helps users understand their money through conversation, automation, and simple
+        next-step recommendations. It is designed to make budgeting less stressful, more personal,
+        and easier to follow every day.
+      </p>
+
+      <div class="hero-actions" style="justify-content: center;">
+        <a class="button button-primary" href="#top">Back to top</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <strong>BudgetPal: Personal Budget Agent</strong><br />
+      A smart budgeting experience built around natural language, AI insights, and practical financial guidance.
+    </footer>
   </main>
-
-  <script>
-    const palettes = {
-      "premium-fintech": {
-        label: "Premium Fintech Mint",
-        description:
-          "A dark premium fintech palette with deep navy surfaces, mint safe-money actions, blue AI accents, amber warnings, and coral over-budget states.",
-        tokens: {
-          Background: "#080B12",
-          Surface: "#101827",
-          Elevated: "#172033",
-          Border: "#263247",
-          Primary: "#4ADEB2",
-          AI: "#6C8CFF",
-          Warning: "#F5B84C",
-          Risk: "#FF8A5C",
-          Danger: "#FF5F6D",
-          Chart1: "#4ADEB2",
-          Chart2: "#6C8CFF",
-          Chart3: "#F5B84C",
-          Chart4: "#FF8A5C",
-          Chart5: "#B084FF",
-          Chart6: "#67D8FF"
-        }
-      },
-      "ai-nebula": {
-        label: "AI Nebula Purple",
-        description:
-          "A more futuristic AI-first palette with purple surfaces, cyan intelligence accents, and a stronger demo-stage visual identity.",
-        tokens: {
-          Background: "#080713",
-          Surface: "#111024",
-          Elevated: "#1A1733",
-          Border: "#2B2850",
-          Primary: "#A78BFA",
-          AI: "#22D3EE",
-          Warning: "#FBBF24",
-          Risk: "#FB7185",
-          Danger: "#F43F5E",
-          Chart1: "#A78BFA",
-          Chart2: "#22D3EE",
-          Chart3: "#FBBF24",
-          Chart4: "#FB7185",
-          Chart5: "#34D399",
-          Chart6: "#60A5FA"
-        }
-      },
-      "luxury-gold": {
-        label: "Luxury Black Gold",
-        description:
-          "A premium private-banking style palette with black, gold, blue AI accents, and a more elegant wealth-product feeling.",
-        tokens: {
-          Background: "#080806",
-          Surface: "#12110D",
-          Elevated: "#1B1811",
-          Border: "#332D1C",
-          Primary: "#F4C95D",
-          AI: "#6EA8FF",
-          Warning: "#F59E0B",
-          Risk: "#F97316",
-          Danger: "#EF4444",
-          Chart1: "#F4C95D",
-          Chart2: "#6EA8FF",
-          Chart3: "#34D399",
-          Chart4: "#F97316",
-          Chart5: "#A78BFA",
-          Chart6: "#F472B6"
-        }
-      },
-      "calm-emerald": {
-        label: "Calm Emerald Bank",
-        description:
-          "A grounded practical budgeting palette with dark emerald surfaces, green financial clarity, and a calmer everyday money feel.",
-        tokens: {
-          Background: "#07110D",
-          Surface: "#0E1B15",
-          Elevated: "#16251D",
-          Border: "#26382F",
-          Primary: "#34D399",
-          AI: "#60A5FA",
-          Warning: "#FACC15",
-          Risk: "#FB923C",
-          Danger: "#F87171",
-          Chart1: "#34D399",
-          Chart2: "#60A5FA",
-          Chart3: "#FACC15",
-          Chart4: "#FB923C",
-          Chart5: "#C084FC",
-          Chart6: "#2DD4BF"
-        }
-      }
-    };
-
-    const html = document.documentElement;
-    const buttons = document.querySelectorAll(".theme-button");
-    const eyebrow = document.getElementById("themeEyebrow");
-    const description = document.getElementById("themeDescription");
-    const paletteGrid = document.getElementById("paletteGrid");
-
-    function renderSwatches(themeName) {
-      const palette = palettes[themeName];
-      paletteGrid.innerHTML = "";
-
-      Object.entries(palette.tokens).forEach(([name, value]) => {
-        const swatch = document.createElement("div");
-        swatch.className = "swatch";
-        swatch.innerHTML = `
-          <div class="swatch-color" style="background:${value}"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">${name}</div>
-            <div class="swatch-code">${value}</div>
-          </div>
-        `;
-        paletteGrid.appendChild(swatch);
-      });
-    }
-
-    function setTheme(themeName) {
-      html.setAttribute("data-theme", themeName);
-
-      buttons.forEach((button) => {
-        button.classList.toggle("active", button.dataset.theme === themeName);
-      });
-
-      eyebrow.textContent = palettes[themeName].label;
-      description.textContent = palettes[themeName].description;
-      renderSwatches(themeName);
-      localStorage.setItem("budgetpal-palette", themeName);
-    }
-
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        setTheme(button.dataset.theme);
-      });
-    });
-
-    const savedTheme = localStorage.getItem("budgetpal-palette") || "premium-fintech";
-    setTheme(savedTheme);
-  </script>
 </body>
 </html>
